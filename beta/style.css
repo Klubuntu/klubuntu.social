@@ -10,8 +10,8 @@
     user-select: none;
 }
 @font-face {
-    font-family: Forte;
-    src: url(FORTE.ttf);
+    font-family: "Forte";
+    src: url(fonts\forte.ttf);
 }
 
 body,
