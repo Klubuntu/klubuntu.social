@@ -1,3 +1,6 @@
+// Variables
+const example = "<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu sapien vel felis luctus dictum iaculis a orci.</h3><h3> Proin accumsan, ligula vel ultricies varius, risus mi rhoncus sem, eget consequat velit enim vel nunc. In id augue vulputate, viverra ipsum non, facilisis lorem.</h3> <h3>Nam at neque sit amet erat scelerisque sagittis. Fusce semper faucibus nisi, sit amet viverra tellus vulputate a.</h3> <h3>Vivamus orci lorem, dignissim nec viverra vel, vulputate in leo. Vestibulum ut felis id quam cursus egestas. Integer aliquet scelerisque dictum.</h3> <h3>Integer et vulputate urna. Ut risus justo, mattis eu dapibus quis, vehicula non lorem. Duis eleifend est id lorem ultricies, quis consectetur quam posuere. Cras iaculis efficitur sollicitudin.</h3> <h3>Nam efficitur maximus efficitur. Sed dictum, sem in pulvinar auctor, nulla urna placerat lorem, ut egestas dolor enim quis dui.Aenean congue metus non varius consequat.</h3> <h3>Cras mollis est vitae neque iaculis interdum.Mauris dictum quam in mauris cursus, vel rutrum libero lobortis.Nam convallis nunc a diam mollis congue.</h3>";
+
 // Functions
 
 function open(url) {
@@ -20,16 +23,82 @@ function openpt() {
     open("bit.ly/rklbpt1");
 }
 
+
+
+function genmodal(modal, arrowBack, headerTitle, BodyCode, borderBody) {
+    if (arrowBack == true) {
+        $("#back-action").fadeIn(0);
+    } else {
+        $("#back-action").fadeOut(0);
+    }
+    $("#modal-header-title").text(headerTitle);
+    $("#other-info").html(BodyCode);
+    h = $(".modal").height();
+    w = $(".modal").width();
+    console.log("H: ", h, " W: ", w)
+}
+
+function example_load() {
+    genmodal("default", true, "Example", example, "");
+}
+
+
+
+const openModal = (modal) => {
+    modal = document.getElementById("demo-modal");
+    document.body.style.overflow = "hidden";
+    $(modal).fadeOut(0);
+    //$(modal).fadeIn(550);
+    modal.setAttribute("open", "true");
+    document.addEventListener("keydown", escClose);
+    let overlay = document.createElement("div");
+    overlay.id = "modal-overlay";
+    document.body.appendChild(overlay);
+};
+
+const closeModal = (modal) => {
+    modal = document.getElementById("demo-modal");
+    document.body.style.overflow = "auto";
+    modal.removeAttribute("open");
+    document.removeEventListener("keydown", escClose);
+    document.body.removeChild(document.getElementById("modal-overlay"));
+};
+
+const escClose = (e) => {
+    if (e.keyCode == 27) {
+        closeModal();
+    }
+};
+let i = 0;
+
+function updateprogress() {
+    if (i == 3) {
+        //$("#start-loading").fadeOut();
+        $("#end-loaing").fadeIn();
+    }
+    setTimeout(function() { $("progressv").html("<f>.</f>.."); }, 400);
+    setTimeout(function() { $("progressv").html(".<f>.</f>."); }, 800);
+    setTimeout(function() { $("progressv").html("..<f>.</f>"); }, 1200);
+    setTimeout(function() { $("progressv").html(".<f>.</f>."); }, 1600);
+    setTimeout(function() { updateprogress() }, 1600);
+    i = i + 1;
+
+
+    console.log(i);
+
+}
+updateprogress();
+
 function refresh() {
     location.reload();
 }
 
 function reportBug() {
-    open("github.com/Klubuntu/klubuntu.eu.org/issues");
+    open("github.com/Klubuntu/EasyCookie-JS");
 }
 
 //infoPagestr = "<h2 class='container-title'>Options</h2><option>Dark Mode</option><switch id='switchTheme'><div class='checkboxbg' id='switchthemebg'><div class='switch' id='switchtheme'></div></div></switch><option>No Icons</option><switch id='switchIcons'><div class='checkboxbg' id='switchiconsbg'><div class='switch' id='switchicons'></div></div></switch>";
-infoPagestr = `<h2 class="container-title">Options</h2><option>Dark Mode</option><switch id="switchTheme"><div class="checkboxbg" id="switchthemebg"><div class="switch" id="switchtheme"></div></div></switch><option>No Icons</option><switch id="switchIcons"><div class="checkboxbg" id="switchiconsbg"><div class="switch" id="switchicons"></div></div></switch><option style="position: relative;top: 10px;">Report</option><switch id="reportBug"><div class="checkboxbg" id="switchiconsbg"><div class="switch" style="width: 4vw; cursor: pointer; color: white;" id="switchicons"><p style="position: relative;top: 5px;" onclick="reportBug()" >Bug</p></div></div></switch>`;
+infoPagestr = `<h2 class="container-title">Options</h2><option>Dark Mode</option><switch id="switchTheme"><div class="checkboxbg" id="switchthemebg"><div class="switch" id="switchtheme"></div></div></switch><option>No Icons</option><switch id="switchIcons"><div class="checkboxbg" id="switchiconsbg"><div class="switch" id="switchicons"></div></div></switch><option style="position: relative;top: 10px;">Report</option><switch id="reportBug"><div class="checkboxbg" id="switchiconsbg"><div class="switch" style="width: 4vw; cursor: pointer;" id="switchicons"><p style="position: relative;top: 5px;" onclick="reportBug()" >Bug</p></div></div></switch>`;
 infoPrivacystr = "<h2 class='container-title'>Privacy</h2><h4>This page using Cookies to work</br> all saves switcher function</h4><h4>User cookies no use to ads,</br> optimize page and fix bugs.</h4>";
 infoIconsstr = "<h2 class='container-title'>Icons</h2><h4>Soon</h4><h4>Font Awesome 5.12</h4><h2 class='container-title'>Scripts</h2><h4>EasyCookie</h4><h5><a href='https://github.com/Klubuntu/EasyCookie-JS'>https://github.com/Klubuntu/EasyCookie-JS</a></h5><h4 style='position:relative;top: -13px;'>Jquery 3.6.1</h4>";
 infoAboutstr = "<h2 class='container-title'>About</h2><h4>Soon</h4><h5>&copy; Klubuntu (2020-2021)</h5>";
@@ -55,11 +124,13 @@ function infoIcons() {
 }
 
 function infoAbout() {
+
     $("container").html(infoAboutstr);
     $("#title-modal").text("About");
 }
 
 function about() {
+    openModal();
     $("#about-info").fadeIn(450);
     infoPage()
 }
@@ -174,6 +245,10 @@ setTimeout(function() {
 // }, 100);
 function loadPage() {
     $(document).ready(function() {
+        $("#model-inner").on('resize', function() {
+            console.log("e");
+        });
+        $("#end-loading").fadeOut();
         $("#switchTheme").click(function() {
             var sw = "#switchtheme";
             var swb = "#switchthemebg";

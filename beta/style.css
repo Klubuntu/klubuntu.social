@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
-
+@import "all.css";
 :root {
     --var-default-color: background-color: rgb(163, 15, 15);
 }
@@ -10,10 +9,6 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-@font-face {
-    font-family: "Forte", "Forte MT Std";
-    src: url(fonts/forte.ttf);
 }
 
 body,
@@ -31,8 +26,7 @@ html {
 }
 
 h1 {
-    font-family: 'Comfortaa', cursive;
-    /*font-family: 'Forte Mt Std', 'Forte';*/
+    font-family: 'Forte Mt Std', 'Forte';
     font-size: 9vh;
     color: white;
     cursor: pointer;
