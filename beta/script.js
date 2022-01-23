@@ -82,10 +82,6 @@ function updateprogress() {
     setTimeout(function() { $("progressv").html(".<f>.</f>."); }, 1600);
     setTimeout(function() { updateprogress() }, 1600);
     i = i + 1;
-
-
-    console.log(i);
-
 }
 updateprogress();
 
@@ -288,8 +284,6 @@ function loadPage() {
                 setTimeout(function() {
                     $(sw).removeClass("unswitched2")
                     backIcons()
-
-
                 }, 620);
                 //backIcons();
                 eIconsswitch = 0
