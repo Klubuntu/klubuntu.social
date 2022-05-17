@@ -154,15 +154,19 @@ checkbox {
 
 .bg-test {
     background-color: #eeeeee;
-    border-radius: 1vh;
-    width: 3vw;
-    height: 5vh;
+    border-radius: 8px;
+    width: 57px;
+    height: 43px;
     min-width: 37.64px;
     cursor: pointer;
+    transition: all .2s ease-in-out;
 }
 
 .bg-test:hover {
-    width: 3.6vw;
+    border-radius: 9px;
+    transform: scale(.99);
+    width: 63px;
+    height: 45px;
 }
 
 .test {
