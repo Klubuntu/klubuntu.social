@@ -38,8 +38,16 @@ function genmodal(modal, arrowBack, headerTitle, BodyCode, borderBody) {
     console.log("H: ", h, " W: ", w)
 }
 
-function example_load() {
-    genmodal("default", true, "Example", example, "");
+function Privacy() {
+    genmodal("default", true, "Privacy Policy", example, "");
+}
+
+function Frameworks() {
+    genmodal("default", true, "Frameworks", example, "");
+}
+
+function Links() {
+    genmodal("default", true, "Links", example, "");
 }
 
 
