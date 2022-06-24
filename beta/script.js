@@ -90,13 +90,13 @@ function refresh() {
 }
 
 function reportBug() {
-    open("github.com/Klubuntu/EasyCookie-JS");
+    open("github.com/Klubuntu/EasyCookieJS");
 }
 
 //infoPagestr = "<h2 class='container-title'>Options</h2><option>Dark Mode</option><switch id='switchTheme'><div class='checkboxbg' id='switchthemebg'><div class='switch' id='switchtheme'></div></div></switch><option>No Icons</option><switch id='switchIcons'><div class='checkboxbg' id='switchiconsbg'><div class='switch' id='switchicons'></div></div></switch>";
 infoPagestr = `<h2 class="container-title">Options</h2><option>Dark Mode</option><switch id="switchTheme"><div class="checkboxbg" id="switchthemebg"><div class="switch" id="switchtheme"></div></div></switch><option>No Icons</option><switch id="switchIcons"><div class="checkboxbg" id="switchiconsbg"><div class="switch" id="switchicons"></div></div></switch><option style="position: relative;top: 10px;">Report</option><switch id="reportBug"><div class="checkboxbg" id="switchiconsbg"><div class="switch" style="width: 4vw; cursor: pointer;" id="switchicons"><p style="position: relative;top: 5px;" onclick="reportBug()" >Bug</p></div></div></switch>`;
 infoPrivacystr = "<h2 class='container-title'>Privacy</h2><h4>This page using Cookies to work</br> all saves switcher function</h4><h4>User cookies no use to ads,</br> optimize page and fix bugs.</h4>";
-infoIconsstr = "<h2 class='container-title'>Icons</h2><h4>Soon</h4><h4>Font Awesome 5.12</h4><h2 class='container-title'>Scripts</h2><h4>EasyCookie</h4><h5><a href='https://github.com/Klubuntu/EasyCookie-JS'>https://github.com/Klubuntu/EasyCookie-JS</a></h5><h4 style='position:relative;top: -13px;'>Jquery 3.6.1</h4>";
+infoIconsstr = "<h2 class='container-title'>Icons</h2><h4>Soon</h4><h4>Font Awesome 5.12</h4><h2 class='container-title'>Scripts</h2><h4>EasyCookie</h4><h5><a href='https://github.com/Klubuntu/EasyCookieJS'>https://github.com/Klubuntu/EasyCookieJS</a></h5><h4 style='position:relative;top: -13px;'>Jquery 3.6.1</h4>";
 infoAboutstr = "<h2 class='container-title'>About</h2><h4>Soon</h4><h5>&copy; Klubuntu (2020-2021)</h5>";
 let eThemeswitch = 0;
 let eIconsswitch = 0;
@@ -149,25 +149,25 @@ function backIcons() {
 function darkmode() {
     $("head").append(darkCSS);
     $("#default-style").remove();
-    easycookie("edit", "theme", "dark");
+    easycookie.edit("theme", "dark");
     //refresh();
 }
 
 function lightmode() {
     $("head").append(backCSS);
     $("#dark-style").remove();
-    easycookie("edit", "theme", "light");
+    easycookie.edit("theme", "light");
     //refresh();
 }
 // First Run or Check Theme
 setTimeout(function() {
-    x = easycookie("get", "theme");
+    x = easycookie.get("theme");
     if (x == "") {
         //alert("First Welcome User on Page")
-        easycookie("add", "theme", "light");
+        easycookie.add("theme", "light");
     } else {
         //alert("Next Welcome User on Page")
-        theme = easycookie("get", "theme");
+        theme = easycookie.get("theme");
         if (theme == 'light') {
             lightmode();
         } else if (theme == 'dark') {
