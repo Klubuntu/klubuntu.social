@@ -8,8 +8,6 @@
     <link id="default-style" rel="stylesheet" href="style.css" />
     <!-- <link id="dark-style" rel="stylesheet" href="dark-style.css" /> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="jquery-3.4.1.min.js"></script>
-    <link rel="stylesheet" href="w3-modal.css">
     <script type="text/javascript" src="awesome/js/all.min.js"></script>
     <script type="text/javascript" src="easycookie.js"></script>
     <script type="text/javascript" src="script.js"></script>
@@ -19,14 +17,20 @@
     <div class="container">
         <h1 id="logo" onclick="refresh()">Klubuntu</h1>
         <div class="span-elements loading">
-            <span id="span" onclick="opengt()" class="bg-test"><i class="fab fa-github test"></i
-				></span>
-            <span id="span2" onclick="openyt()" class="bg-test"><i class="fab fa-youtube test"></i
-				></span>
-            <span id="span3" onclick="openfb()" class="bg-test"><i class="fab fa-facebook test"></i
-				></span>
-            <span id="span4" onclick="openpt()" class="bg-test"><i class="fas fa-dollar-sign test"></i
-				></span>
+            <span id="span" onclick="opengt()" class="bg-test"><i class="fab fa-github test"></i></span>
+            <span id="span2" onclick="openyt()" class="bg-test"><i class="fab fa-youtube test"></i></span>
+            <span id="span3" onclick="openfb()" class="bg-test"><i class="fab fa-facebook test"></i></span>
+            <span id="span4" onclick="openpt()" class="bg-test"><i class="fas fa-dollar-sign test"></i></span>
+            <span id="span5" onclick="opendc()" class="bg-test" style="display: block;width: 281px;height: 46px;margin-left: 65px;margin-top: 7px;">
+                <i class="fab fa-discord test" style="margin-top: 3%;"></i>
+                <span style="
+                color: rgb(163, 15, 15) !important;
+                font-size: 21px;
+                margin-left: 11px;
+                position: relative;
+                top: -5px;
+                ">Join to Discord</span>
+            </span>
         </div>
     </div>
     <div class="footer loading">
@@ -34,36 +38,41 @@
         <span id="about" onclick="about()"><i class="fas fa-info-circle white icon"></i></span>
     </div>
     <div class="mm" style="transition: all .5s linear;">
-        <div id="demo-modal" class="modal" role="dialog" tabindex="-1" style="transition: all .5s linear;" onresize="console.log('e')">
+        <div id="page-modal" class="modal" role="dialog" tabindex="-1" style="transition: all .5s linear;"
+            onresize="console.log('e')">
             <div class="model-inner" style="transition: all .5s linear;">
                 <div class="modal-header">
                     <h3>
-                        <span id="back-action">&lsaquo;&nbsp;</span><span id="modal-header-title">About Page</span>
+                        <span id="back-action" onclick="Menu()">&lsaquo;</span><span>&nbsp;</span><span
+                            id="modal-header-title">About Page</span>
                     </h3>
-                    <button class="modal-close" data-id="demo-modal" aria-label="Close" onclick="closeModal()">
-                  &times;
-                </button>
+                    <button class="modal-close" data-id="page-modal" aria-label="Close" onclick="closeModal()">
+                        &times;
+                    </button>
                 </div>
                 <p id="start-loading">
-                    <h4>
-                        <center>Update in progress
-                            <progressv></progressv>
-                        </center>
-                    </h4>
+                <h4>
+                    <center>Update in progress
+                        <progressv></progressv>
+                    </center>
+                </h4>
                 </p>
                 <p id="end-loading">
-                    <center id="other-info">
-                        <h3 onclick="Privacy()">Privacy Policy</h3>
-                        <h3 onclick="Frameworks()">Frameworks</h3>
-                        <h3 onclick="Links()">Links</h3>
+                    <center id="content">
+                        <div id="menu">
+                            <h3 onclick="Privacy()">Privacy Policy</h3>
+                            <h3 onclick="Frameworks()">Frameworks</h3>
+                            <h3 onclick="Links()">Links</h3>
+                        </div>
+                        <div id="other"></div>
                     </center>
                 </p>
                 <div class="modal-header"></div>
                 <p id="page-info">
                     <center id="page-other">
-                        <h5>© Klubuntu (2020-2021)</h5>
+                        <h5>© Klubuntu (2020-2022)</h5>
                         <h5>
-                            Page Version 3.0
+                            Page Version 3.1
                         </h5>
                     </center>
                 </p>
