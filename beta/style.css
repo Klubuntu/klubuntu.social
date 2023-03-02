@@ -158,7 +158,7 @@ checkbox {
     margin-top: 1.3%;
 }
 
-.bg-test {
+.bg-minibox {
     background-color: #eeeeee;
     border-radius: 8px;
     width: 57px;
@@ -168,21 +168,21 @@ checkbox {
     transition: all .2s ease-in-out;
 }
 
-.bg-test:hover {
+.bg-minibox:hover {
     border-radius: 9px;
     transform: scale(.99);
     width: 63px;
     height: 45px;
 }
 
-.test {
+.minibox {
     margin-top: 15%;
     color: rgb(163, 15, 15) !important;
     font-size: 3vh;
     cursor: pointer;
 }
 
-.bg-test:before {
+.bg-minibox:before {
     max-height: 5.65px;
 }
 
