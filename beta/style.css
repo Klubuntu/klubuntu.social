@@ -204,12 +204,19 @@ span.dolar-box {
 }
 
 span.dc-box {
-    display: block;
+    /*! display: block; */
     width: 281px;
     height: 46px;
-    margin-left: 14px;
+    margin-left: 2.5%;
     margin-top: 7px;
 }
+
+span.dc-box:hover{
+    width: 287px;
+    height: 46px;
+    transform: scale(.99);
+}
+
 
 span.dc-text{
     color: rgb(163, 15, 15) !important;
