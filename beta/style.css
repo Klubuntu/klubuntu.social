@@ -199,15 +199,24 @@ checkbox {
     display: none;
 }
 
-#span,
-#span2,
-#span3 {
-    margin-right: 12px;
-    display: inline-block;
+span.dolar-box {
+    margin-right: unset;
 }
 
-#span4 {
-    display: inline-block;
+span.dc-box {
+    display: block;
+    width: 281px;
+    height: 46px;
+    margin-left: 14px;
+    margin-top: 7px;
+}
+
+span.dc-text{
+    color: rgb(163, 15, 15) !important;
+    font-size: 21px;
+    margin-left: 11px;
+    position: relative;
+    top: -5px;
 }
 
 .icon {
