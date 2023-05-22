@@ -151,12 +151,12 @@ function about() {
 
 
 function darkmode() {
-    $("#default-style").attr("href", "dark-style.css")
+    $("#dark-css").attr("href", "dark-style.css")
     EasyCookie.edit("theme", "dark");
 }
 
 function lightmode() {
-    $("#default-style").attr("href", "style.css")
+    $("#dark-css").attr("href", "")
     EasyCookie.edit("theme", "light");
 }
 // First Run or Check Theme
