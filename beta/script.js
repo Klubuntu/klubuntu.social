@@ -48,31 +48,15 @@ const linksModal =
 
 // Functions
 
+const l1 = "bit.ly/rklbgit1";
+const l2 = "bit.ly/rklbyt1";
+const l3 = "bit.ly/rklbfb1";
+const l4 = "bit.ly/rklbpt1"
+const l5 = "bit.ly/rklbdc1";
+
 function open(url) {
     window.location.href = "https://" + url;
 }
-
-function opengt() {
-    open("bit.ly/rklbgit1");
-}
-
-function openyt() {
-    open("bit.ly/rklbyt1");
-}
-
-function openfb() {
-    open("bit.ly/rklbfb1");
-}
-
-function openpt() {
-    open("bit.ly/rklbpt1");
-}
-
-function opendc(){
-    open("discord.com/invite/Y8Pux4uuPF");
-}
-
-
 
 function genmodal(arrowBack, headerTitle, modalCode) {
     if (arrowBack) {
