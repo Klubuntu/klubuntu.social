@@ -15,6 +15,10 @@ html {
     max-height: 5.65px;
 }
 
+span.dc-text{
+    color: #f7f7f7;
+}
+
 /* Dark Modals */
 .model-inner {
    background-color: #343434 !important;
@@ -28,4 +32,5 @@ html {
 .modal-close {
     color: #f1f1f1 !important;
 }
+
 
