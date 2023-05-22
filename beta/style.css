@@ -41,6 +41,10 @@ h1 {
     animation: typing2 0.8s steps(30, end);
 }
 
+li {
+   list-style: none;
+}
+
 center {
     text-align: center;
 }
@@ -232,15 +236,6 @@ span.dc-text{
     right: 3%;
     font-size: 2.5vh;
     cursor: pointer;
-}
-
-.w3-button {
-    color: black !important;
-}
-
-.w3-button:hover {
-    cursor: pointer;
-    font-size: 135%;
 }
 
 .white {
