@@ -1,5 +1,4 @@
 // Variables
-const example = "<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu sapien vel felis luctus dictum iaculis a orci.</h3><h3> Proin accumsan, ligula vel ultricies varius, risus mi rhoncus sem, eget consequat velit enim vel nunc. In id augue vulputate, viverra ipsum non, facilisis lorem.</h3> <h3>Nam at neque sit amet erat scelerisque sagittis. Fusce semper faucibus nisi, sit amet viverra tellus vulputate a.</h3> <h3>Vivamus orci lorem, dignissim nec viverra vel, vulputate in leo. Vestibulum ut felis id quam cursus egestas. Integer aliquet scelerisque dictum.</h3> <h3>Integer et vulputate urna. Ut risus justo, mattis eu dapibus quis, vehicula non lorem. Duis eleifend est id lorem ultricies, quis consectetur quam posuere. Cras iaculis efficitur sollicitudin.</h3> <h3>Nam efficitur maximus efficitur. Sed dictum, sem in pulvinar auctor, nulla urna placerat lorem, ut egestas dolor enim quis dui.Aenean congue metus non varius consequat.</h3> <h3>Cras mollis est vitae neque iaculis interdum.Mauris dictum quam in mauris cursus, vel rutrum libero lobortis.Nam convallis nunc a diam mollis congue.</h3>";
 const privacyPolicy = 
 "<p>This Privacy Policy document contains types of information that is collected and recorded by Social Page and how we use it.</p>\
 <h2>Consent</h2>\
@@ -15,7 +14,7 @@ const privacyPolicy =
 <li>Develop new products, services, features, and functionality</li>\
 </ul>\
 <h2>Log Files</h2>\
-<p>[EDIT]</p>\
+<p>The Site may collect the browser useragent and the users IP address</p>\
 <h2>Cookies and Web Beacons</h2>\
 <p>Like any other website, Social Page uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>\
 <h2>Third Party Privacy Policies</h2>\
@@ -77,19 +76,18 @@ function opendc(){
 
 function genmodal(arrowBack, headerTitle, modalCode) {
     if (arrowBack) {
+        $("#modal-header-title").attr("onclick", "Menu()")
         $("#back-action").fadeIn(0);
         $("#menu").fadeOut(0);
         $("#other").fadeIn(0);
     } else {
+        $("#modal-header-title").removeAttr("onclick")
         $("#back-action").fadeOut(0);
         $("#menu").fadeIn(0);
         $("#other").fadeOut(0);
     }
     $("#modal-header-title").text(headerTitle);
     $("#other").html(modalCode);
-    h = $(".modal").height();
-    w = $(".modal").width();
-    console.log("H: ", h, " W: ", w)
 }
 
 function Privacy() {
@@ -107,7 +105,6 @@ function Links() {
 function Menu(){
     genmodal(false, "About Page");
 }
-
 
 const openModal = (modal) => {
     modal = document.getElementById("page-modal");
@@ -170,14 +167,12 @@ function about() {
 
 
 function darkmode() {
-    $("head").append(darkCSS);
-    $("#default-style").remove();
+    $("#default-style").attr("href", "dark-style.css")
     EasyCookie.edit("theme", "dark");
 }
 
 function lightmode() {
-    $("head").append(backCSS);
-    $("#dark-style").remove();
+    $("#default-style").attr("href", "style.css")
     EasyCookie.edit("theme", "light");
 }
 // First Run or Check Theme
@@ -196,8 +191,6 @@ setTimeout(function() {
 }, 0);
 
 
-
-
 setTimeout(function() {
     $(".span-elements").fadeIn();
     $(".footer").fadeIn(650);
@@ -210,9 +203,6 @@ setTimeout(function() {
 
 function loadPage() {
     $(document).ready(function() {
-        $("#model-inner").on('resize', function() {
-            console.log("e");
-        });
         $("#end-loading").fadeOut();
     })
 }
