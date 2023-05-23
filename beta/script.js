@@ -185,8 +185,7 @@ setTimeout(function() {
     $("#logo").fadeIn(650);
 }, 950);
 
-function loadPage() {
     $(document).ready(function() {
-        $("#end-loading").fadeOut();
+       $("#gth").attr("onclick", "open(l1)")
     })
-}
+
