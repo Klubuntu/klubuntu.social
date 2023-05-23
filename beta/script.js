@@ -51,10 +51,10 @@ const linksModal =
 const l1 = "bit.ly/rklbgit1";
 const l2 = "bit.ly/rklbyt1";
 const l3 = "bit.ly/rklbfb1";
-const l4 = "bit.ly/rklbpt1"
+const l4 = "bit.ly/rklbpt1";
 const l5 = "bit.ly/rklbdc1";
 
-function open(url) {
+function view(url) {
     window.location.href = "https://" + url;
 }
 
