@@ -162,7 +162,9 @@ setTimeout(function() {
 
 
 setTimeout(function() {
-    $(".span-elements").fadeIn();
+    $(".elements").removeClass('loading');
+    $(".elements").fadeIn();
+    $(".footer").removeClass('loading');
     $(".footer").fadeIn(650);
 }, 1350);
 
