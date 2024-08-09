@@ -62,7 +62,7 @@ function genmodal(arrowBack, headerTitle, modalCode) {
         $(".other").fadeOut(0);
     }
     $(".modal-header-title").text(headerTitle);
-    $(".other").html(modalCode);
+    $("#other").html(modalCode);
 }
 
 function Privacy() {
@@ -89,7 +89,11 @@ const openModal = (modal) => {
     document.body.appendChild(overlay);
 };
 
-const closeModal = (modal) => {
+function openAbout(){
+    openModal()
+}
+
+const closeAbout = (modal) => {
     modal = document.getElementById("page-modal");
     document.body.style.overflow = "auto";
     modal.removeAttribute("open");
@@ -104,10 +108,6 @@ const escClose = (e) => {
 };
 let i = 0;
 
-function refresh() {
-    location.reload();
-}
-
 function reportBug() {
     open("github.com/Klubuntu/EasyCookieJS");
 }
@@ -117,37 +117,8 @@ let eIconsswitch = 0;
 
 
 function backIcons() {
-    refresh();
+    window.location.reload();
 }
-
-function about() {
-    openModal();
-}
-
-function darkmode() {
-    $("#dark-css").attr("href", "dark-style.css")
-    EasyCookie.edit("theme", "dark");
-}
-
-function lightmode() {
-    $("#dark-css").attr("href", "")
-    EasyCookie.edit("theme", "light");
-}
-// First Run or Check Theme
-setTimeout(function() {
-    x = EasyCookie.get("theme");
-    if (x == "") {
-        EasyCookie.add("theme", "light");
-    } else {
-        theme = EasyCookie.get("theme");
-        if (theme == 'light') {
-            lightmode();
-        } else if (theme == 'dark') {
-            darkmode();
-        }
-    }
-}, 0);
-
 
 setTimeout(function() {
     $(".elements").removeClass('loading');

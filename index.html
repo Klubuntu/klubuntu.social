@@ -48,7 +48,7 @@
         </div>
     </div>
     <div class="footer loading">
-        <span onclick="about()"><i class="fas fa-info-circle white about-icon"></i></span>
+        <span onclick="openAbout()"><i class="fas fa-info-circle white about-icon"></i></span>
     </div>
     <div style="transition: all .5s linear;">
         <div id="page-modal" class="modal" role="dialog" tabindex="-1">
@@ -58,28 +58,24 @@
                         <span class="back-action" onclick="Menu()">&lsaquo;</span><span>&nbsp;</span><span
                             class="modal-header-title">About Page</span>
                     </h3>
-                    <button class="modal-close" data-id="page-modal" aria-label="Close" onclick="closeModal()">
+                    <button class="modal-close" data-id="page-modal" aria-label="Close" onclick="closeAbout()">
                         &times;
                     </button>
                 </div>
-                <p class="end-loading">
-                    <center>
-                        <div class="menu">
-                            <h3 onclick="Privacy()">Privacy Policy</h3>
-                            <h3 onclick="Frameworks()">Frameworks</h3>
-                        </div>
-                        <div id="other"></div>
-                    </center>
-                </p>
+                <center>
+                    <div class="menu">
+                        <h3 onclick="Privacy()">Privacy Policy</h3>
+                        <h3 onclick="Frameworks()">Frameworks</h3>
+                    </div>
+                    <div id="other" class="other"></div>
+                </center>
                 <div class="modal-header"></div>
-                <p>
-                    <center class="page-other">
-                        <h5>© Klubuntu (2020-2024)</h5>
-                        <h5>
-                            Page Version 4.1
-                        </h5>
-                    </center>
-                </p>
+                <center class="page-other">
+                    <h5>© Klubuntu (2020-2024)</h5>
+                    <h5>
+                        Page Version 4.1
+                    </h5>
+                </center>
             </div>
         </div>
     </div>
