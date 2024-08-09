@@ -6,17 +6,6 @@ const frameworksModal = [
         children: [
             {
                 type: 'a',
-                props: { href: 'https://github.com/Klubuntu/EasyCookieJS' },
-                children: ['EasyCookieJS']
-            }
-        ]
-    },
-    {
-        type: 'h3',
-        props: { style: { fontWeight: 500 } },
-        children: [
-            {
-                type: 'a',
                 props: { href: 'https://code.jquery.com/jquery-3.6.0.min.js' },
                 children: ['jQuery 3.6.0']
             }
