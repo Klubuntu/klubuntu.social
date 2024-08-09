@@ -94,6 +94,16 @@ center {
     cursor: pointer;
 }
 
+.page-other h5 {
+    font-size: 1.1rem;
+}
+
+.page-other {
+    position: relative;
+    top: 1px;
+    left: 0.3%;
+}
+
 /* Animations */
 
 @keyframes logo {

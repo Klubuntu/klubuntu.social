@@ -2,16 +2,6 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
 @import "components/modal.css";
 
-.page-other h5 {
-    font-size: 1.1rem;
-}
-
-.page-other {
-    position: relative;
-    top: 1px;
-    left: 0.3%;
-}
-
 @media (max-width: 768px) {
     .modal-inner {
         max-width: 100%;
