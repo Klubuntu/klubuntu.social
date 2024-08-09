@@ -101,7 +101,6 @@ function genmodal(arrowBack, headerTitle, modalCode) {
     else {
         $other.html(modalCode);
     }
-
 }
 
 function Frameworks() {
@@ -134,22 +133,9 @@ const closeAbout = (modal) => {
 
 const escClose = (e) => {
     if (e.keyCode == 27) {
-        closeModal();
+        closeAbout();
     }
 };
-let i = 0;
-
-function reportBug() {
-    open("github.com/Klubuntu/EasyCookieJS");
-}
-
-let eThemeswitch = 0;
-let eIconsswitch = 0;
-
-
-function backIcons() {
-    window.location.reload();
-}
 
 setTimeout(function () {
     $(".elements").removeClass('loading');
