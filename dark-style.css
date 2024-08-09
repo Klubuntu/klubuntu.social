@@ -1,0 +1,36 @@
+body,
+html {
+    background-color: rgb(98, 9, 9);;
+}
+
+.bg-minibox {
+    background-color: #303030;
+}
+
+.minibox {
+    color: #f7f7f7;
+}
+
+.bg-minibox:before {
+    max-height: 5.65px;
+}
+
+span.dc-text{
+    color: #f7f7f7;
+}
+
+/* Dark Modals */
+.model-inner {
+   background-color: #343434 !important;
+   color: #f1f1f1 !important;
+}
+
+.modal-header {
+   border-bottom: 2px solid white !important;
+}
+
+.modal-close {
+    color: #f1f1f1 !important;
+}
+
+
