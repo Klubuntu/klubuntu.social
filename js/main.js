@@ -1,12 +1,61 @@
 // Variables
-const frameworksModal = 
-'<h3 style="font-weight: 500;"><a href="https://github.com/Klubuntu/EasyCookieJS">EasyCookieJS</a></h3>\
-<h3 style="font-weight: 500;"><a href="https://code.jquery.com/jquery-3.6.0.min.js">jQuery 3.6.0</a></h3>\
-<h3 style="font-weight: 500;"><a href="https://animate.style/">AnimateCSS</a></h3>\
-<h3 style="font-weight: 500;"><a href="https://use.fontawesome.com/releases/v5.15.4/fontawesome-free-5.15.4-web.zip">Font Awesome 5.15</a></h3>\
-<h3 style="font-weight: 500;"><a href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap">Fonts Google: Comfortaa</h3>'
-
-// Functions
+const frameworksModal = [
+    {
+        type: 'h3',
+        props: { style: { fontWeight: 500 } },
+        children: [
+            {
+                type: 'a',
+                props: { href: 'https://github.com/Klubuntu/EasyCookieJS' },
+                children: ['EasyCookieJS']
+            }
+        ]
+    },
+    {
+        type: 'h3',
+        props: { style: { fontWeight: 500 } },
+        children: [
+            {
+                type: 'a',
+                props: { href: 'https://code.jquery.com/jquery-3.6.0.min.js' },
+                children: ['jQuery 3.6.0']
+            }
+        ]
+    },
+    {
+        type: 'h3',
+        props: { style: { fontWeight: 500 } },
+        children: [
+            {
+                type: 'a',
+                props: { href: 'https://animate.style/' },
+                children: ['AnimateCSS']
+            }
+        ]
+    },
+    {
+        type: 'h3',
+        props: { style: { fontWeight: 500 } },
+        children: [
+            {
+                type: 'a',
+                props: { href: 'https://use.fontawesome.com/releases/v5.15.4/fontawesome-free-5.15.4-web.zip' },
+                children: ['Font Awesome 5.15']
+            }
+        ]
+    },
+    {
+        type: 'h3',
+        props: { style: { fontWeight: 500 } },
+        children: [
+            {
+                type: 'a',
+                props: { href: 'https://fonts.googleapis.com/css2?family=Comfortaa&display=swap' },
+                children: ['Fonts Google: Comfortaa']
+            }
+        ]
+    }
+];
 
 const gt = "bit.ly/rklbgit1";
 const yt = "bit.ly/rklbyt1";
@@ -14,6 +63,8 @@ const fb = "bit.ly/rklbfb1";
 const pt = "bit.ly/rklbpt1";
 const dc = "bit.ly/rklbdc1";
 const pic = "kb-gallery.vercel.app";
+
+// Functions
 
 function view(url) {
     window.location.href = "https://" + url;
@@ -32,14 +83,32 @@ function genmodal(arrowBack, headerTitle, modalCode) {
         $(".other").fadeOut(0);
     }
     $(".modal-header-title").text(headerTitle);
-    $("#other").html(modalCode);
+    const $other = $("#other");
+    if(headerTitle == "Frameworks"){
+        $other.html("");
+        frameworksModal.forEach((element) => {
+            const h3Element = document.createElement(element.type);
+            h3Element.style.fontWeight = element.props.style.fontWeight;
+          
+            const aElement = document.createElement(element.children[0].type);
+            aElement.href = element.children[0].props.href;
+            aElement.textContent = element.children[0].children[0];
+          
+            h3Element.appendChild(aElement);
+            $other.append(h3Element);
+          });
+    }
+    else {
+        $other.html(modalCode);
+    }
+
 }
 
 function Frameworks() {
     genmodal(true, "Frameworks", frameworksModal);
 }
 
-function Menu(){
+function Menu() {
     genmodal(false, "About Page");
 }
 
@@ -82,20 +151,20 @@ function backIcons() {
     window.location.reload();
 }
 
-setTimeout(function() {
+setTimeout(function () {
     $(".elements").removeClass('loading');
     $(".elements").fadeIn();
     $(".footer").removeClass('loading');
     $(".footer").fadeIn(650);
 }, 1350);
 
-setTimeout(function() {
+setTimeout(function () {
     $(".logo").fadeOut(380);
     $(".logo").fadeIn(650);
 }, 950);
 
 function loadPage() {
-    $(document).ready(function() {
+    $(document).ready(function () {
         $(".end-loading").fadeOut();
     })
 }
