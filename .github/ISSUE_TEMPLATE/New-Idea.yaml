@@ -1,0 +1,22 @@
+name: "New Idea 💡"
+description: Your Good Idea
+title: "Good Idea"
+labels: [idea]
+body:
+- type: markdown
+  attributes:
+    value: "If the idea is related to the operation or display of the website, you've come to the right place"
+- type: checkboxes
+  id: chk_result
+  attributes:
+    label: "What do you have an idea for"
+    description: You may select more than one,
+    options:
+      - label: "HTML Code | Main Page"
+      - label: "Javascript | Page Script"
+      - label: "Style | Page Layout/Responsive"
+      - label: "Other"
+      - label: "I don't know"
+- type: textarea
+  attributes:
+    label: "Describe your idea to add to the page"
