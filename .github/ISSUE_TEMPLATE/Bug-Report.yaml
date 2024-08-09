@@ -1,0 +1,22 @@
+name: "Bug report 🐛"
+description: Report errors or unexpected behavior
+title: "Unknown bug"
+labels: [bug]
+body:
+- type: markdown
+  attributes:
+    value: "If the error is related to the operation or display of the website, you've come to the right place"
+- type: checkboxes
+  id: chk_result
+  attributes:
+    label: "What's is the problem"
+    description: You may select more than one,
+    options:
+      - label: "HTML Code | Main Page"
+      - label: "Javascript | Page Script"
+      - label: "Style | Page Layout/Responsive"
+      - label: "Other"
+      - label: "I don't know"
+- type: textarea
+  attributes:
+    label: "Describe the problem you found on the website to fix it"
