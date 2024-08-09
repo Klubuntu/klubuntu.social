@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Klubuntu - Social Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="default-style" rel="stylesheet" href="css/main.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="logo" onclick="refresh()">Klubuntu</h1>
+        <div class="elements loading">
+            <div class="col1">
+                <div onclick="view(gt)" class="icon-bg">
+                    <i class="fab fa-github icon"></i>
+                    <span>Github</span>
+                </div>
+                <div onclick="view(yt)" class="icon-bg">
+                    <i class="fab fa-youtube icon"></i>
+                    <span>Youtube</span>
+                </div>
+                <div onclick="view(fb)" class="icon-bg">
+                    <i class="fab fa-facebook icon"></i>
+                    <span>Facebook</span>
+                </div>
+            </div>
+            <div class="col2">
+                <div onclick="view(pic)" class="icon-bg">
+                    <i class="fas fa-image icon"></i>
+                    <span>My Gallery</span>
+                </div>
+                <div onclick="view(dc)" class="icon-bg">
+                    <i class="fab fa-discord icon"></i>
+                    <span>Discord</span>
+                </div>
+                <div onclick="view(pt)" class="icon-bg">
+                    <i class="fas fa-dollar-sign icon"></i>
+                    <span>Patreon</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer loading">
+        <span onclick="openAbout()"><i class="fas fa-info-circle white about-icon"></i></span>
+    </div>
+    <div style="transition: all .5s linear;">
+        <div id="page-modal" class="modal" role="dialog" tabindex="-1">
+            <div class="modal-inner">
+                <div class="modal-header">
+                    <h3>
+                        <span class="back-action" onclick="Menu()">&lsaquo;</span><span>&nbsp;</span><span
+                            class="modal-header-title">About Page</span>
+                    </h3>
+                    <button class="modal-close" data-id="page-modal" aria-label="Close" onclick="closeAbout()">
+                        &times;
+                    </button>
+                </div>
+                <center>
+                    <div class="menu">
+                        <h3 onclick="Frameworks()">Frameworks</h3>
+                    </div>
+                    <div id="other" class="other"></div>
+                </center>
+                <div class="modal-header"></div>
+                <center class="page-other">
+                    <h5>© Klubuntu (2020-2024)</h5>
+                    <h5>
+                        Page Version 4.1
+                    </h5>
+                </center>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
