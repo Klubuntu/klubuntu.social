@@ -5,38 +5,22 @@ f {
     font-size: 1.5em;
 }
 
-#other-info h3 {
-    cursor: pointer;
-    font-size: 1.6em;
+.page-other h5 {
+    font-size: 1.1rem;
 }
 
-#page-other h5 {
-    font-size: 1em;
-}
-
-#back-action {
-    font-size: 1.7em;
+.page-other {
     position: relative;
     top: 1px;
     left: 0.3%;
-    cursor: pointer;
-}
-
-div {
-    -webkit-transition: all 700ms ease;
-    overflow: hidden;
-    border-radius: 0px;
 }
 
 @media (max-width: 768px) {
-    .model-inner {
+    .modal-inner {
         max-width: 100%;
         overflow: auto;
         height: 100%;
         width: 100%;
-    }
-    #other-info {
-        overflow: auto;
     }
 }
 
@@ -53,16 +37,16 @@ div {
 }
 
 @media only screen and (max-width: 350px) {
-    #logo{
+    .logo{
         font-size: 6vh !important;
     }
 }
 
 @media only screen and (max-width: 240px) {
-    #logo{
+    .logo{
         font-size: 2vh !important;
     }
-    .bg{
+    .icon-bg{
         min-width: unset !important;
     }
     .elements div span{

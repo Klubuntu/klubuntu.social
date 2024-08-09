@@ -14,32 +14,32 @@
 
 <body>
     <div class="container">
-        <h1 id="logo" onclick="refresh()">Klubuntu</h1>
+        <h1 class="logo" onclick="refresh()">Klubuntu</h1>
         <div class="elements loading">
-            <div>
-                <div onclick="view(gt)" class="bg">
+            <div class="col1">
+                <div onclick="view(gt)" class="icon-bg">
                     <i class="fab fa-github icon"></i>
                     <span>Github</span>
                 </div>
-                <div onclick="view(yt)" class="bg">
+                <div onclick="view(yt)" class="icon-bg">
                     <i class="fab fa-youtube icon"></i>
                     <span>Youtube</span>
                 </div>
-                <div onclick="view(fb)" class="bg">
+                <div onclick="view(fb)" class="icon-bg">
                     <i class="fab fa-facebook icon"></i>
                     <span>Facebook</span>
                 </div>
             </div>
-            <div>
-                <div onclick="view(pic)" class="bg">
+            <div class="col2">
+                <div onclick="view(pic)" class="icon-bg">
                     <i class="fas fa-image icon"></i>
                     <span>My Gallery</span>
                 </div>
-                <div onclick="view(dc)" class="bg">
+                <div onclick="view(dc)" class="icon-bg">
                     <i class="fab fa-discord icon"></i>
                     <span>Discord</span>
                 </div>
-                <div onclick="view(pt)" class="bg">
+                <div onclick="view(pt)" class="icon-bg">
                     <i class="fas fa-dollar-sign icon"></i>
                     <span>Patreon</span>
                 </div>
@@ -48,23 +48,23 @@
         </div>
     </div>
     <div class="footer loading">
-        <span id="about" onclick="about()"><i class="fas fa-info-circle white about-icon"></i></span>
+        <span onclick="about()"><i class="fas fa-info-circle white about-icon"></i></span>
     </div>
-    <div class="mm" style="transition: all .5s linear;">
-        <div id="page-modal" class="modal" role="dialog" tabindex="-1" style="transition: all .5s linear;">
-            <div class="model-inner" style="transition: all .5s linear;">
+    <div style="transition: all .5s linear;">
+        <div id="page-modal" class="modal" role="dialog" tabindex="-1">
+            <div class="modal-inner">
                 <div class="modal-header">
                     <h3>
-                        <span id="back-action" onclick="Menu()">&lsaquo;</span><span>&nbsp;</span><span
-                            id="modal-header-title">About Page</span>
+                        <span class="back-action" onclick="Menu()">&lsaquo;</span><span>&nbsp;</span><span
+                            class="modal-header-title">About Page</span>
                     </h3>
                     <button class="modal-close" data-id="page-modal" aria-label="Close" onclick="closeModal()">
                         &times;
                     </button>
                 </div>
-                <p id="end-loading">
-                    <center id="content">
-                        <div id="menu">
+                <p class="end-loading">
+                    <center>
+                        <div class="menu">
                             <h3 onclick="Privacy()">Privacy Policy</h3>
                             <h3 onclick="Frameworks()">Frameworks</h3>
                         </div>
@@ -72,11 +72,11 @@
                     </center>
                 </p>
                 <div class="modal-header"></div>
-                <p id="page-info">
-                    <center id="page-other">
-                        <h5>© Klubuntu (2020-2023)</h5>
+                <p>
+                    <center class="page-other">
+                        <h5>© Klubuntu (2020-2024)</h5>
                         <h5>
-                            Page Version 4.0
+                            Page Version 4.1
                         </h5>
                     </center>
                 </p>

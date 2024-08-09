@@ -51,18 +51,18 @@ function view(url) {
 
 function genmodal(arrowBack, headerTitle, modalCode) {
     if (arrowBack) {
-        $("#modal-header-title").attr("onclick", "Menu()")
-        $("#back-action").fadeIn(0);
-        $("#menu").fadeOut(0);
-        $("#other").fadeIn(0);
+        $(".modal-header-title").attr("onclick", "Menu()")
+        $(".back-action").fadeIn(0);
+        $(".menu").fadeOut(0);
+        $(".other").fadeIn(0);
     } else {
-        $("#modal-header-title").removeAttr("onclick")
-        $("#back-action").fadeOut(0);
-        $("#menu").fadeIn(0);
-        $("#other").fadeOut(0);
+        $(".modal-header-title").removeAttr("onclick")
+        $(".back-action").fadeOut(0);
+        $(".menu").fadeIn(0);
+        $(".other").fadeOut(0);
     }
-    $("#modal-header-title").text(headerTitle);
-    $("#other").html(modalCode);
+    $(".modal-header-title").text(headerTitle);
+    $(".other").html(modalCode);
 }
 
 function Privacy() {
@@ -85,6 +85,7 @@ const openModal = (modal) => {
     document.addEventListener("keydown", escClose);
     let overlay = document.createElement("div");
     overlay.id = "modal-overlay";
+    overlay.className = "modal-overlay";
     document.body.appendChild(overlay);
 };
 
@@ -102,19 +103,6 @@ const escClose = (e) => {
     }
 };
 let i = 0;
-
-function updateprogress() {
-    if (i == 3) {
-        $("#end-loaing").fadeIn();
-    }
-    setTimeout(function() { $("progressv").html("<f>.</f>.."); }, 400);
-    setTimeout(function() { $("progressv").html(".<f>.</f>."); }, 800);
-    setTimeout(function() { $("progressv").html("..<f>.</f>"); }, 1200);
-    setTimeout(function() { $("progressv").html(".<f>.</f>."); }, 1600);
-    setTimeout(function() { updateprogress() }, 1600);
-    i = i + 1;
-}
-updateprogress();
 
 function refresh() {
     location.reload();
@@ -169,12 +157,12 @@ setTimeout(function() {
 }, 1350);
 
 setTimeout(function() {
-    $("#logo").fadeOut(380);
-    $("#logo").fadeIn(650);
+    $(".logo").fadeOut(380);
+    $(".logo").fadeIn(650);
 }, 950);
 
 function loadPage() {
     $(document).ready(function() {
-        $("#end-loading").fadeOut();
+        $(".end-loading").fadeOut();
     })
 }

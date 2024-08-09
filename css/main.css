@@ -10,7 +10,7 @@
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgb(81 9 9)
+    background-color: rgb(81, 9, 9);
 }
 
 .container {
@@ -25,7 +25,11 @@ body {
     text-align: center;
 }
 
-#logo {
+.loading {
+    display: none !important;
+}
+
+.logo {
     font-family: 'Comfortaa', cursive;
     font-size: 9vh;
     color: white;
@@ -39,23 +43,23 @@ center {
     text-align: center;
 }
 
-.bg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    /* width: 130px; */
-    /* width: 70%; */
+/* Redirect buttons */
+
+.icon-bg {
     min-width: 159px;
     margin-top: 10px;
     margin-left: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid white;
     border-radius: 8px;
-    cursor: pointer;
     transition: all .2s ease-in-out;
+    cursor: pointer;
 }
 
-.bg:hover{
+.icon-bg:hover{
     background: rgba(255, 255,255, 0.3);
 }
 
@@ -63,10 +67,6 @@ center {
     color: white;
     font-size: 3vh;
     cursor: pointer;
-}
-
-.loading {
-    display: none !important;
 }
 
 .elements{
