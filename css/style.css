@@ -1,0 +1,236 @@
+@import url('../fonts/fonts.css');
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #0F0F0F;
+    color: white;
+    font-family: "Josefin Sans";
+    font-weight: normal;
+}
+
+.logo{
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 9vh;
+}
+
+.container{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.promo-section{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.promo-section-mobile{
+    display: none;
+}
+
+.dev-section, 
+.media-section{
+    width: 266px;
+    text-align: center;
+}
+
+.dev-section h1, .media-section h1 {
+    font-weight: 600;
+    font-size: 4em;
+}
+
+.dev-section h2, .media-section h2 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 4em;
+}
+
+.dev-section .icons, .media-section .icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.dev-section .icons .icon img{
+    width: 45px;
+    height: 45px;
+}
+
+
+.icon:hover{
+    background-color: rgba(157, 18, 18, 0.4);
+}
+
+.divider {
+    height: 86vh;
+    width: 2px;
+    background: repeating-linear-gradient(
+        to bottom,
+        white,
+        white 10px,
+        transparent 10px,
+        transparent 20px
+    );
+}
+
+.other-buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.accent-btn{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 15px;
+    width: 177px;
+    height: 47px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 22.106px;
+    font-weight: 600;
+    border-radius: 9px;
+    border: 2px solid #E8E8E8;
+    background: #212020;
+    transition: 0.4s all;
+    cursor: pointer;
+}
+
+.accent-btn:hover{
+    background-color: rgba(255, 0, 0, 0.25);
+}
+
+a{
+    color: unset;
+    text-decoration: none !important;
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 1200px) {
+    .logo{
+        font-size: 7.4vh;
+    }
+    .other-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .dev-section, .media-section{
+        width: 190px;
+    }
+    .dev-section h2, .media-section h2{
+        font-size: 2.9em;
+    }
+    .dev-section .icons, .media-section .icons {
+        grid-template-columns: repeat(2, minmax(80px, 1fr));
+    }
+}
+
+@media screen and (max-width: 945px) {
+    body{
+        height: unset;
+    }
+    .logo{
+        font-size: 5.7vh;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .logo{
+        font-size: 4.6vh;
+    }
+    .dev-section, .media-section {
+        width: 170px;
+    }
+    .dev-section h2, .media-section h2 {
+        font-size: 2.1em;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .promo-section{
+        display: none;
+    }
+    .promo-section-mobile{
+        display: block;
+        margin-top: 35px;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+    .dev-section .icons, .media-section .icons {
+        grid-template-columns: repeat(3, minmax(80px, 1fr));
+    }
+    .dev-section, .media-section {
+        width: unset;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .accent-btn{
+        width: 137px;
+        font-size: 18.106px;
+    }
+    .accent-btn svg.gallery{
+        margin-right: 5px;
+    }
+    .dev-section .icons, .media-section .icons {
+        grid-template-columns: repeat(2, minmax(80px, 1fr));
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .logo {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    body{
+        height: unset;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .accent-btn{
+        width: 66px;
+        font-size: 0px;
+    }
+    .accent-btn svg.gallery{
+        margin-right: 5px;
+    }
+    .dev-section .icons, .media-section .icons {
+        grid-template-columns: repeat(1, minmax(80px, 1fr));
+    }
+    .icon img {
+        width: 40px;
+        height: 40px;
+    }
+    .dev-section .icons .icon img{
+        width: 35px;
+        height: 35px;
+    }
+}
