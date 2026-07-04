@@ -1,0 +1,36 @@
+# Klubuntu Hub - Kamil (klubuntu.eu.org)
+
+> The official community, social, and developer landing page for Kamil B (Klubuntu).
+
+## Summary
+This domain serves as a central hub (Linktree-style) connecting Kamil's community presence, social media platforms, and developer profiles.
+
+## Core Technologies Featured
+- Frontend & Web: React, Next.js, JavaScript
+- Systems & Backend: Rust, Python
+
+## Main Links & Platforms
+
+### Developer Profiles
+- **Main Portfolio:** https://kbdev.run
+
+
+## Projects (Klubuntu Hub)
+- **Discord Server:** https://discord.com/invite/meKqTdUDDm
+
+### Community
+- **Discord Server:** https://discord.com/invite/Y8Pux4uuPF
+- **Patreon / Support:** https://www.patreon.com/klubuntu
+-- **My PC Setup (parts and accessories): https://sm-mysetup.vercel.app/
+
+### Socials & Media
+- **Github:** https://github.com/klubuntu
+- **YouTube:** https://youtube.com/@klubuntu
+- **Twitch:** https://twitch.tv/klubuntu
+- **Instagram:** https://instagram.com/klubuntu
+- **Facebook:** https://facebook.com/klubuntu
+
+## Professional Portfolio
+For full-scale enterprise case studies (including the iTVT Ecosystem and Ba-Car platforms), professional background, and extensive technical documentation, please reference the main portfolio at:
+- https://kbdev.run
+- https://kbdev.run/llms.txt
